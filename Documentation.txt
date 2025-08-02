@@ -1,0 +1,99 @@
+Patient Management System – Project Documentation
+📌 Project Title:
+Patient Management System using Core Java, JDBC, and MySQL
+📘 Abstract:
+The Patient Management System is a console-based application developed in Core Java with JDBC for database connectivity and MySQL as the backend database. The system allows healthcare administrators to add, view, update, and delete patient records efficiently. It serves as a foundational application for managing essential patient information and can be extended to include medical histories, appointments, or reports.
+
+🎯 Objectives:
+Create a user-friendly Java application to manage patient data.
+
+Implement full CRUD (Create, Read, Update, Delete) operations.
+
+Store data in a persistent MySQL database.
+
+Ensure modular and maintainable code using the DAO design pattern.
+
+🏗️ Technology Stack:
+Component		- Technology Used
+Programming Language	- Core Java (JDK 8+)
+Database		- MySQL
+Connectivity		- JDBC (Java Database Connectivity)
+IDE Used		- IntelliJ
+
+🧩 Modules:
+1. Main Menu (Console)
+User is shown options to Add, View, Update, Delete, or Exit the system.
+
+2. Add Patient
+Captures user input (name, age, EEG value, symptoms).
+
+Validates and stores it in the database using a prepared statement.
+
+3. View Patients
+Displays all patient records stored in the database.
+
+4. Update Patient
+Allows the user to update the name, age, EEG value, or symptoms of a selected patient by ID.
+
+5. Delete Patient
+Deletes a specific patient record by ID from the database.
+
+📄 Class Structure:
+1. Patient.java (Model)
+Fields: id, name, age, eeg, symtoms
+
+Getters and setters
+
+2. PatientDAO.java (Data Access Object)
+Methods:
+
+addPatient(Patient p)
+
+viewPatient()
+
+updatePatient(Patient p)
+
+deletePatient(int id)
+
+3. DBConnection.java
+Handles JDBC connection to MySQL.
+
+4. MainApp.java (Driver Class)
+Contains main method and menu-driven interaction logic.
+
+🧪 Test Cases:
+    Test Scenario	             Expected Output
+Add valid patient	          -Patient saved in DB
+View patients when DB empty	  -Show "No records found"
+Update with invalid ID	          -Show "Patient not found" message
+Delete existing patient	          -Row deleted from DB
+Enter wrong menu option	Show      -"Invalid choice"
+
+✅ Advantages:
+Easy-to-use command-line interface
+
+Clean separation of concerns using DAO
+
+Fast database operations with JDBC
+
+Easily extensible for GUI or web-based upgrade.
+
+🚀 Future Enhancements:
+Add login and authentication for users
+
+Implement a GUI using JavaFX or Swing
+
+Connect EEG input from hardware or simulate real-time values
+
+Export patient reports to PDF
+
+Integrate ML model for condition prediction (e.g., NeuroVision AI module).
+
+📂 How to Run:
+Install MySQL and create the database/table.
+
+Configure your JDBC connection (username/password).
+
+Compile and run the MainApp.java file from your IDE or terminal.
+
+Interact with the system via console prompts.
